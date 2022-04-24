@@ -1,7 +1,6 @@
-<script src="../../dist/beet-js.js"></script>
+import beet from 'beet-esm';
 
-<script>
-beet.get("My Transfer App", "EOS", true).then( async app => {
+beet.get("My Transfer App", "Mozilla", "website.tld", "EOS", true).then( async app => {
     app.EOS.transfer(
         {
             to: "clockworkbts",
@@ -19,4 +18,3 @@ beet.get("My Transfer App", "EOS", true).then( async app => {
 }).catch(err => {
     console.error(err);
 });
-</script>

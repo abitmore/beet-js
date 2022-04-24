@@ -1,8 +1,7 @@
-<script src="../../dist/beet-js.js"></script>
-<script src="https://cdn.steemjs.com/lib/latest/steem.min.js"></script>
-<script>
+import beet from 'beet-esm';
+import steem from 'steem';
 
-beet.get('beet-js example for steem', 'STEEM').then(app => {
+beet.get('beet-js example for steem', "Mozilla", "website.tld", 'STEEM').then(app => {
     steem = app.STEEM.inject(steem);
     app.STEEM.getAccount().then(account => {
         if (typeof account == "string") {
@@ -30,4 +29,3 @@ beet.get('beet-js example for steem', 'STEEM').then(app => {
 }).catch((err) => {
     console.error(err);
 });
-</script>
